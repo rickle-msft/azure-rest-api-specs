@@ -9732,6 +9732,7 @@
     "Url": {
       "name": "url",
       "description": "The URL of the service account, container, or blob that is the targe of the desired operation.",
+	  "x-ms-parameter-location": "client",
       "required": true,
       "type": "string",
       "in": "path",
@@ -9740,6 +9741,7 @@
     "ApiVersionParameter": {
       "name": "x-ms-version",
       "x-ms-client-name": "version",
+	  "x-ms-parameter-location": "client",
       "in": "header",
       "required": true,
       "type": "string",
@@ -10635,49 +10637,6 @@
       "description": "Optional. Only valid when Object Replication is enabled for the storage container and on the source blob of the replication. When retrieving this header, it will return the header with the policy id and rule id (e.g. x-ms-or-policyid_ruleid), and the value will be the status of the replication (e.g. complete, failed).",
       "x-ms-header-collection-prefix": "x-ms-or-"
     },
-    "PathRenameMode": {
-      "name": "mode",
-      "x-ms-client-name": "pathRenameMode",
-      "description": "Determines the behavior of the rename operation",
-      "in": "query",
-      "required": false,
-      "type": "string",
-      "enum": [
-        "legacy",
-        "posix"
-      ],
-      "x-ms-enum": {
-        "name": "PathRenameMode",
-        "modelAsString": false
-      }
-    },
-    "PosixPermissions": {
-      "name": "x-ms-permissions",
-      "description": "Optional and only valid if Hierarchical Namespace is enabled for the account. Sets POSIX access permissions for the file owner, the file owning group, and others. Each class may be granted read, write, or execute permission.  The sticky bit is also supported.  Both symbolic (rwxrw-rw-) and 4-digit octal notation (e.g. 0766) are supported.",
-      "x-ms-client-name": "posixPermissions",
-      "in": "header",
-      "required": false,
-      "type": "string",
-      "x-ms-parameter-location": "method"
-    },
-    "PosixAcl": {
-      "name": "x-ms-acl",
-      "description": "Sets POSIX access control rights on files and directories. The value is a comma-separated list of access control entries. Each access control entry (ACE) consists of a scope, a type, a user or group identifier, and permissions in the format \"[scope:][type]:[id]:[permissions]\".",
-      "x-ms-client-name": "posixAcl",
-      "in": "header",
-      "required": false,
-      "type": "string",
-      "x-ms-parameter-location": "method"
-    },
-    "PosixUmask": {
-      "name": "x-ms-umask",
-      "x-ms-client-name": "posixUmask",
-      "in": "header",
-      "required": false,
-      "type": "string",
-      "x-ms-parameter-location": "method",
-      "description": "Only valid if Hierarchical Namespace is enabled for the account. This umask restricts permission settings for file and directory, and will only be applied when default Acl does not exist in parent directory. If the umask bit has set, it means that the corresponding permission will be disabled. Otherwise the corresponding permission will be determined by the permission. A 4-digit octal notation (e.g. 0022) is supported here. If no umask was specified, a default umask - 0027 will be used."
-    },
     "Prefix": {
       "name": "prefix",
       "in": "query",
@@ -10724,6 +10683,7 @@
     },
     "QueryRequest": {
       "name": "queryRequest",
+	  "x-ms-parameter-location": "method",
       "in": "body",
       "schema": {
         "$ref": "#/definitions/QueryRequest"
