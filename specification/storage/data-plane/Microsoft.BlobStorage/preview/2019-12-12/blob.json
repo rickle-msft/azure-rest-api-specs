@@ -36,6 +36,8 @@
   ],
   "paths": {
 	"/": {
+	},
+	"/{containerName}": {
 	}
   },
   "x-ms-paths": {
