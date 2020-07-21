@@ -35,7 +35,7 @@
     "application/xml"
   ],
   "paths": {
-	"/?restype=service&comp=properties": {
+	"/": {
 	}
   },
   "x-ms-paths": {
