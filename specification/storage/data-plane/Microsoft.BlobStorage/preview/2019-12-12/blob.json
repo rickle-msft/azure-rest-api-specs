@@ -38,6 +38,10 @@
 	"/": {
 	},
 	"/{containerName}": {
+	},
+	"/{filesystem}/{path}": {
+	},
+	"/{containerName}/{blob}": {
 	}
   },
   "x-ms-paths": {
