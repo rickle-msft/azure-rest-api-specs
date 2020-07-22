@@ -31,15 +31,39 @@ use-internal-constructors: true
 add-credentials: true
 ```
 
-### Tag: package-2019-12
+### Tag: package-2019-12.blob
 
-These settings apply only when `--tag=package-2019-12` is specified on the command line.
+These settings apply only when `--tag=package-2019-12.blob` is specified on the command line.
 
-``` yaml $(tag) == 'package-2019-12'
+``` yaml $(tag) == 'package-2019-12.blob'
 input-file:
 - Microsoft.BlobStorage/stable/2019-12-12/blob.json
+```
+
+### Tag: package-2019-12.file
+
+These settings apply only when `--tag=package-2019-12.file` is specified on the command line.
+
+``` yaml $(tag) == 'package-2019-12.file'
+input-file:
 - Microsoft.FileStorage/preview/2019-12-12/file.json
+```
+
+### Tag: package-2019-12.queue
+
+These settings apply only when `--tag=package-2019-12.queue` is specified on the command line.
+
+``` yaml $(tag) == 'package-2019-12.queue'
+input-file:
 - Microsoft.QueueStorage/preview/2019-12-12/queue.json
+```
+
+### Tag: package-2019-12.datalake
+
+These settings apply only when `--tag=package-2019-12.datalake` is specified on the command line.
+
+``` yaml $(tag) == 'package-2019-12.datalake'
+input-file:
 - Microsoft.StorageDataLake/stable/2019-12-12/DataLakeStorage.json
 ```
 
