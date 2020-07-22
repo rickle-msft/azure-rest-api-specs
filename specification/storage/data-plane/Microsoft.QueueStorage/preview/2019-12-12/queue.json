@@ -34,7 +34,16 @@
   "produces": [
     "application/xml"
   ],
-  "paths": {},
+  "paths": {
+	"/": {
+	},
+	"/{queueName}": {
+	},
+	"/{queueName}/messages": {
+	},
+	"/{queueName}/messages/{messageid}": {
+	}
+  },
   "x-ms-paths": {
     "/?restype=service&comp=properties": {
       "put": {
