@@ -31,7 +31,7 @@ use-internal-constructors: true
 add-credentials: true
 ```
 
-### Tag: package-2019-12-blob
+### Tag: package-2019-12.blob
 
 These settings apply only when `--tag=package-2019-12.blob` is specified on the command line.
 
