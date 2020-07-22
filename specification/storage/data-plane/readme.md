@@ -38,9 +38,6 @@ These settings apply only when `--tag=package-2019-12` is specified on the comma
 ``` yaml $(tag) == 'package-2019-12'
 input-file:
 - Microsoft.BlobStorage/stable/2019-12-12/blob.json
-- Microsoft.FileStorage/preview/2019-12-12/file.json
-- Microsoft.QueueStorage/preview/2019-12-12/queue.json
-- Microsoft.StorageDataLake/stable/2019-12-12/DataLakeStorage.json
 ```
 
 ### Tag: package-2018-11
