@@ -2118,6 +2118,7 @@
   "parameters": {
     "Url": {
       "name": "url",
+	  "x-ms-parameter-location": "client",
       "description": "The URL of the service account, container, or blob that is the targe of the desired operation.",
       "required": true,
       "type": "string",
@@ -2126,6 +2127,7 @@
     },
     "FileSystemResource": {
 	  "name": "resource",
+	  "x-ms-parameter-location": "client",
 	  "in": "query",
 	  "description": "The value must be \"filesystem\" for all filesystem operations.",
 	  "required": true,
@@ -2141,6 +2143,7 @@
     "ApiVersionParameter": {
       "name": "x-ms-version",
       "x-ms-client-name": "version",
+	  "x-ms-parameter-location": "client",
       "in": "header",
       "required": true,
       "type": "string",
@@ -2267,6 +2270,7 @@
     },
     "PathSetAccessControlRecursiveMode": {
       "name": "mode",
+	  "x-ms-parameter-location": "method",
       "in": "query",
       "description": "Mode \"set\" sets POSIX access control rights on files and directories, \"modify\" modifies one or more POSIX access control rights  that pre-exist on files and directories, \"remove\" removes one or more POSIX access control rights  that were present earlier on files and directories",
       "required": true,
@@ -2411,6 +2415,7 @@
     "FileSystem": {
       "name": "filesystem",
       "x-ms-client-name": "fileSystem",
+	  "x-ms-parameter-location": "client",
       "in": "path",
       "description": "The filesystem identifier.",
       "pattern": "^[$a-z0-9](?!.*--)[-a-z0-9]{1,61}[a-z0-9]$",
@@ -2421,6 +2426,7 @@
     },
     "Path": {
       "name": "path",
+	  "x-ms-parameter-location": "client",
       "in": "path",
       "description": "The file or directory path.",
       "required": true,
