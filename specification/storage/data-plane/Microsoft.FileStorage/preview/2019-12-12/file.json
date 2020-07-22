@@ -33,7 +33,14 @@
         "application/xml"
     ],
     "paths": {
-
+		"/": {
+		},
+		"/{shareName}": {
+		},
+		"/{shareName}/{directory}": {
+		},
+		"/{shareName}/{directory}/{fileName}": {
+		}
     },
     "x-ms-paths": {
         "/?restype=service&comp=properties": {
