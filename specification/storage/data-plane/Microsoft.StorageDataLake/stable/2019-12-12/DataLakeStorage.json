@@ -2243,7 +2243,6 @@
     },
     "RecursiveOptional": {
       "name": "recursive",
-      "x-ms-client-name": "recursive",
       "x-ms-parameter-location": "method",
       "in": "query",
       "description": "Required",
@@ -2252,7 +2251,6 @@
     },
     "RecursiveRequired": {
       "name": "recursive",
-      "x-ms-client-name": "recursive",
       "x-ms-parameter-location": "method",
       "in": "query",
       "description": "Required",
@@ -2261,7 +2259,6 @@
     },
     "Continuation": {
       "name": "continuation",
-      "x-ms-client-name": "continuation",
       "x-ms-parameter-location": "method",
       "in": "query",
       "description": "Optional.  When deleting a directory, the number of paths that are deleted with each invocation is limited.  If the number of paths to be deleted exceeds this limit, a continuation token is returned in this response header.  When a continuation token is returned in the response, it must be specified in a subsequent invocation of the delete operation to continue deleting the directory.",
