@@ -30,7 +30,14 @@
   "produces": [
     "application/json"
   ],
-  "paths": {},
+  "paths": {
+	"/": {
+	},
+	"/{filesystem}": {
+	},
+	"/{filesystem}/{path}": {
+	}
+  },
   "x-ms-paths": {
     "/": {
       "get": {
