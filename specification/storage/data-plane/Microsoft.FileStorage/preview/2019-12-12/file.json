@@ -4773,6 +4773,7 @@
         "ApiVersionParameter": {
             "name": "x-ms-version",
             "x-ms-client-name": "version",
+			"x-ms-parameter-location": "client",
             "in": "header",
             "description": "Specifies the version of the operation to use for this request.",
             "required": true,
@@ -5082,6 +5083,7 @@
         "FileRangeWriteFromUrl": {
             "name": "x-ms-write",
             "x-ms-client-name": "fileRangeWriteFromUrl",
+			"x-ms-parameter-location": "method",
             "in": "header",
             "description": "Only update is supported: - Update: Writes the bytes downloaded from the source url into the specified range.",
             "required": true,
@@ -5260,6 +5262,7 @@
         },
         "Url": {
             "name": "url",
+			"x-ms-parameter-location": "client",
             "in": "path",
             "description": "The URL of the service account, share, directory or file that is the target of the desired operation.",
             "required": true,
