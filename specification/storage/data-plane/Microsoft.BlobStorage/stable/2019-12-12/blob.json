@@ -2256,6 +2256,12 @@
         }
       },
       "parameters": [
+		{
+		  "name": "container",
+		  "in": "path",
+		  "required": "true",
+		  "type": "string"
+		},
         {
           "name": "restype",
           "in": "query",
