@@ -30,7 +30,14 @@
   "produces": [
     "application/json"
   ],
-  "paths": {},
+  "paths": {
+    "/": {
+    },
+    "/{filesystem}": {
+    },
+    "/{filesystem}/{path}": {
+    }
+  },
   "x-ms-paths": {
     "/": {
       "get": {
@@ -850,7 +857,7 @@
                 "format": "date-time-rfc1123"
               },
               "x-ms-request-id": {
-                "x-ms-client-name": "RequestId", 
+                "x-ms-client-name": "RequestId",
                 "description": "A server-generated UUID recorded in the analytics logs for troubleshooting and correlation.",
                 "pattern": "^[{(]?[0-9a-f]{8}[-]?([0-9a-f]{4}[-]?){3}[0-9a-f]{12}[)}]?$",
                 "type": "string"
@@ -1518,7 +1525,7 @@
                 "format": "date-time-rfc1123"
               },
               "x-ms-request-id": {
-                "x-ms-client-name": "RequestId", 
+                "x-ms-client-name": "RequestId",
                 "description": "A server-generated UUID recorded in the analytics logs for troubleshooting and correlation.",
                 "pattern": "^[{(]?[0-9a-f]{8}[-]?([0-9a-f]{4}[-]?){3}[0-9a-f]{12}[)}]?$",
                 "type": "string"
@@ -2140,6 +2147,7 @@
   "parameters": {
     "Url": {
       "name": "url",
+      "x-ms-parameter-location": "client",
       "description": "The URL of the service account, container, or blob that is the targe of the desired operation.",
       "required": true,
       "type": "string",
@@ -2148,6 +2156,7 @@
     },
     "FileSystemResource": {
 	  "name": "resource",
+    "x-ms-parameter-location": "client",
 	  "in": "query",
 	  "description": "The value must be \"filesystem\" for all filesystem operations.",
 	  "required": true,
@@ -2162,6 +2171,7 @@
 	},
     "ApiVersionParameter": {
       "name": "x-ms-version",
+      "x-ms-parameter-location": "client",
       "x-ms-client-name": "version",
       "in": "header",
       "required": true,
@@ -2289,6 +2299,7 @@
     },
     "PathSetAccessControlRecursiveMode": {
       "name": "mode",
+      "x-ms-parameter-location": "method",
       "in": "query",
       "x-ms-parameter-location": "method",
       "description": "Mode \"set\" sets POSIX access control rights on files and directories, \"modify\" modifies one or more POSIX access control rights  that pre-exist on files and directories, \"remove\" removes one or more POSIX access control rights  that were present earlier on files and directories",
@@ -2442,6 +2453,7 @@
     },
     "FileSystem": {
       "name": "filesystem",
+      "x-ms-parameter-location": "client",
       "x-ms-client-name": "fileSystem",
       "in": "path",
       "description": "The filesystem identifier.",
@@ -2453,6 +2465,7 @@
     },
     "Path": {
       "name": "path",
+      "x-ms-parameter-location": "client",
       "in": "path",
       "description": "The file or directory path.",
       "required": true,

@@ -10692,7 +10692,7 @@
     },
     "QueryRequest": {
       "name": "queryRequest",
-      "x-ms-parameter-location": "client",
+      "x-ms-parameter-location": "method",
       "in": "body",
       "schema": {
         "$ref": "#/definitions/QueryRequest"
