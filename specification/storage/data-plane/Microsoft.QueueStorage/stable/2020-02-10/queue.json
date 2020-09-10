@@ -34,7 +34,16 @@
   "produces": [
     "application/xml"
   ],
-  "paths": {},
+  "paths": {
+    "/": {
+    },
+    "/{queueName}": {
+    },
+    "/{queueName}/messages": {
+    },
+    "/{queueName}/messages/{messageid}": {
+    }
+  },
   "x-ms-paths": {
     "/?restype=service&comp=properties": {
       "put": {
@@ -1650,6 +1659,7 @@
   "parameters": {
     "Url": {
       "name": "url",
+      "x-ms-parameter-location": "client",
       "description": "The URL of the service account, queue or message that is the targe of the desired operation.",
       "required": true,
       "type": "string",
@@ -1659,6 +1669,7 @@
     "ApiVersionParameter": {
       "name": "x-ms-version",
       "x-ms-client-name": "version",
+      "x-ms-parameter-location": "client",
       "in": "header",
       "required": true,
       "type": "string",
@@ -1706,19 +1717,19 @@
       "description": "The length of the request."
     },
     "ListQueuesInclude": {
-      "name": "include", 
-      "in": "query", 
-      "required": false, 
+      "name": "include",
+      "in": "query",
+      "required": false,
       "type": "array",
       "collectionFormat": "csv",
       "items": {
-      "type": "string", 
-      "enum": [ 
-        "metadata" 
-      ], 
-      "x-ms-enum": { 
-        "name": "ListQueuesIncludeType", 
-        "modelAsString": false 
+      "type": "string",
+      "enum": [
+        "metadata"
+      ],
+      "x-ms-enum": {
+        "name": "ListQueuesIncludeType",
+        "modelAsString": false
         }
       },
       "x-ms-parameter-location": "method",
