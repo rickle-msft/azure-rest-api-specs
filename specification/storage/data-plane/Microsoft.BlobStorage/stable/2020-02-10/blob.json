@@ -34,7 +34,14 @@
   "produces": [
     "application/xml"
   ],
-  "paths": {},
+  "paths": {
+    "/": {
+    },
+    "/{containerName}": {
+    },
+    "/{containerName}/{blob}": {
+    }
+  },
   "x-ms-paths": {
     "/?restype=service&comp=properties": {
       "put": {
@@ -4968,7 +4975,7 @@
             "$ref": "#/parameters/SourceIfNoneMatch"
           },
           {
-            "$ref": "#/parameters/SourceIfTags"	
+            "$ref": "#/parameters/SourceIfTags"
           },
           {
             "$ref": "#/parameters/IfModifiedSince"
@@ -9594,7 +9601,7 @@
           "$ref": "#/definitions/QuerySerialization",
           "xml": {
             "name": "InputSerialization"
-          }      
+          }
         },
         "OutputSerialization": {
           "$ref": "#/definitions/QuerySerialization",
@@ -9794,6 +9801,7 @@
   "parameters": {
     "Url": {
       "name": "url",
+      "x-ms-parameter-location": "client",
       "description": "The URL of the service account, container, or blob that is the targe of the desired operation.",
       "required": true,
       "type": "string",
@@ -9803,6 +9811,7 @@
     "ApiVersionParameter": {
       "name": "x-ms-version",
       "x-ms-client-name": "version",
+      "x-ms-parameter-location": "client",
       "in": "header",
       "required": true,
       "type": "string",
@@ -10683,6 +10692,7 @@
     },
     "QueryRequest": {
       "name": "queryRequest",
+      "x-ms-parameter-location": "client",
       "in": "body",
       "schema": {
         "$ref": "#/definitions/QueryRequest"
